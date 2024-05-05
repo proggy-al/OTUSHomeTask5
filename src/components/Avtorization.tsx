@@ -27,7 +27,6 @@ const Avtorization = () => {
                 type: 'A_IN',
                 loginName: login
             });
-            setState(initialState)
         }
     }
 

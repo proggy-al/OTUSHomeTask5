@@ -1,6 +1,4 @@
-import { useDispatch } from "react-redux";
-import store from "../redux/store";
-import { useReducer } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const AvtorizationCheck = () => {
     const css = {
@@ -9,7 +7,7 @@ const AvtorizationCheck = () => {
         fontWeight: 'bold'
     };
 
-    const forceUpdate = useReducer(bool => !bool, true)[1];
+    const result = useSelector((state: any) => state);
 
     const dispatch = useDispatch();
     
@@ -18,11 +16,10 @@ const AvtorizationCheck = () => {
             type: 'A_OUT',
             loginName: ''
         });
-        forceUpdate();
     }
 
     return <div style={css}>
-        <p>Статус авторизации: {store.getState()}</p>
+        <p>Статус авторизации: {result}</p>
         <button onClick={clickOut}>Выход</button>
     </div>
 };
