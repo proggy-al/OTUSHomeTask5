@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route,  Link,  Routes,  BrowserRouter} from "react-router-dom";
 import HomePage from './components/HomePage';
-import Login from './components/Login';
-import Register from './components/Register';
+import Login from './components/Avtorization';
+import Register from './components/UIExample';
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
             <Link to={'/'}>Главная страница (Home)</Link>
           </li>
           <li>
-            <Link to={'/page1'}>Страница 1 (Login)</Link>
+            <Link to={'/page1'}>Страница 1 (Авторизация)</Link>
           </li>
           <li>
-            <Link to={'/page2'}>Страница 2 (Register)</Link>
+            <Link to={'/page2'}>Страница 2 (Сторонние UI)</Link>
           </li>
           <li>
             <Link to={'/empty'}>Страница 3 (404)</Link>
